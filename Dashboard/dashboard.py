@@ -16,6 +16,12 @@ bikehour_df = pd.read_csv("data_terpakai.csv")
 # st.write(bikehour_df.columns.tolist())
 st.write(bikehour_df.columns.tolist())
 
+try:
+    bikehour_df = pd.read_csv("data_terpakai.csv", delimiter=';')
+    bikehour_df.columns = bikehour_df.columns.str.strip()  # Remove any whitespace from column names
+except Exception as e:
+    st.error(f"Error loading data: {e}")
+
 
 # Sidebar untuk memilih rentang waktu tahun
 st.sidebar.title("Filter Rentang Tahun")
