@@ -54,10 +54,10 @@ st.pyplot(fig)
 # 2. Total Penyewaan Sepeda Berdasarkan Cuaca
 st.header("Perbandingan Penyewaan Sepeda Berdasarkan Kondisi Cuaca")
 
-total_sewa_per_cuaca = filtered_df.groupby(["weathersit", "Year"])["cnt"].sum().reset_index()
+total_sewa_per_cuaca = filtered_df.groupby(["WeatherSituation", "Year"])["cnt"].sum().reset_index()
 
 fig, ax = plt.subplots()
-sns.barplot(data=total_sewa_per_cuaca, x="weathersit", y="cnt", hue="Year", palette="magma", ax=ax)
+sns.barplot(data=total_sewa_per_cuaca, x="WeatherSituation", y="cnt", hue="Year", palette="magma", ax=ax)
 ax.set_ylabel("Total Jumlah Penyewaan")
 ax.set_title("Total Penyewaan Sepeda Berdasarkan Kondisi Cuaca")
 plt.tight_layout()
