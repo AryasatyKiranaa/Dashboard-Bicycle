@@ -40,10 +40,10 @@ filtered_df = bikehour_df[(bikehour_df["Year"] >= year_range[0]) & (bikehour_df[
 # 1. Total Penyewaan Sepeda Berdasarkan Musim
 st.header("Perbandingan Penyewaan Sepeda Berdasarkan Musim")
 
-total_sewa_per_musim = filtered_df.groupby(["season", "Year"])["cnt"].sum().reset_index()
+total_sewa_per_musim = filtered_df.groupby(["Season", "Year"])["cnt"].sum().reset_index()
 
 fig, ax = plt.subplots()
-sns.barplot(data=total_sewa_per_musim, x="season", y="cnt", hue="Year", palette="magma", ax=ax)
+sns.barplot(data=total_sewa_per_musim, x="Season", y="cnt", hue="Year", palette="magma", ax=ax)
 ax.set_ylabel("Total Jumlah Penyewaan")
 ax.set_title("Total Penyewaan Sepeda Berdasarkan Musim dan Tahun")
 plt.tight_layout()
