@@ -100,10 +100,10 @@ st.pyplot(fig)
 # 5. Total Penyewaan Sepeda Berdasarkan Bulan
 st.header("Total Penyewaan Sepeda Berdasarkan Bulan")
 
-jumlah_rental_bulanan = filtered_df.groupby(["mnth", "Year"])["cnt"].sum().reset_index()
+jumlah_rental_bulanan = filtered_df.groupby(["Month", "Year"])["cnt"].sum().reset_index()
 
 fig, ax = plt.subplots()
-sns.lineplot(data=jumlah_rental_bulanan, x="mnth", y="cnt", hue="Year", palette="viridis", marker="o", ax=ax)
+sns.lineplot(data=jumlah_rental_bulanan, x="Month", y="cnt", hue="Year", palette="viridis", marker="o", ax=ax)
 ax.set_ylabel("Total Jumlah Penyewaan")
 ax.set_title("Total Penyewaan Sepeda Berdasarkan Bulan")
 plt.tight_layout()
