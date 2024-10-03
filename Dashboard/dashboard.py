@@ -14,6 +14,7 @@ import seaborn as sns
 bikehour_df = pd.read_csv("data_terpakai.csv")
 
 # st.write(bikehour_df.columns.tolist())
+st.write(bikehour_df.columns.tolist())
 
 
 # Sidebar untuk memilih rentang waktu tahun
