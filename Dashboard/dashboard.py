@@ -29,7 +29,7 @@ year_range = st.sidebar.slider("Pilih Tahun", min_value=int(bikehour_df["Year"].
                                max_value=int(bikehour_df["Year"].max()), value=(2011, 2012))
 
 # Hanya menggunakan satu metode untuk menampilkan gambar di sidebar
-st.sidebar.image('sepeda.png', width=250)
+st.sidebar.image('Dashboard/sepeda.png', width=250)
 
 # Filter berdasarkan tahun yang dipilih
 filtered_df = bikehour_df[(bikehour_df["Year"] >= year_range[0]) & (bikehour_df["Year"] <= year_range[1])]
