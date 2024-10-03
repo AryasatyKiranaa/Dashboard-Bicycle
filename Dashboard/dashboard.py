@@ -66,10 +66,10 @@ st.pyplot(fig)
 # 3. Analisa Penyewaan Pada Tiap Hari
 st.header("Analisa Penyewaan Pada Tiap Hari")
 
-jumlah_rental_weekday = filtered_df.groupby(["weekday", "Year"])["cnt"].sum().reset_index()
+jumlah_rental_weekday = filtered_df.groupby(["Weekday", "Year"])["cnt"].sum().reset_index()
 
 fig, ax = plt.subplots()
-sns.lineplot(data=jumlah_rental_weekday, x="weekday", y="cnt", hue="Year", palette="viridis", marker="o", ax=ax)
+sns.lineplot(data=jumlah_rental_weekday, x="Weekday", y="cnt", hue="Year", palette="viridis", marker="o", ax=ax)
 ax.set_ylabel("Total Jumlah Penyewaan")
 ax.set_title("Analisa Penyewaan Pada Tiap Hari")
 plt.tight_layout()
