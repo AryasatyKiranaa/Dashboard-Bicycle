@@ -23,7 +23,8 @@ streamlit run dashboard.py
 ```
 
 ## Streamlit Cloud 
-Link Streamlit Tirta: <a href='https://bikesharing-tirtaaj.streamlit.app/' target='_blank' title='Bike Sharing Dashboard by Tirta Agung Jati | Streamlit'>Bike Sharing Dashboard by Tirta Agung Jati</a>
+Link Streamlit Aryasaty: <a href='https://dashboard-bicycle.streamlit.app' target='_blank' title='Bike Sharing Dashboard Aryasaty | Streamlit'>Bike Sharing Dashboard Aryasaty</a>
+
 
 ## Berikut Tampilan atau hasil screenshot dari dashboard
 
